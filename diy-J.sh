@@ -30,8 +30,8 @@ cp $CURRENT_DIR/DIY/app_icon.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xhd
 cp $CURRENT_DIR/DIY/app_icon.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxhdpi/app_icon.png
 mv $CURRENT_DIR/DIY/app_icon.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxxhdpi/app_icon.png
 #首页行数修改
-sed -i 's/spanCount = (int)Math.floor(sites.size()/60)/spanCount = (int)Math.floor(sites.size()/10)/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
-sed -i 's/clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 380+200*spanCount)/clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 400+230*spanCount)/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
+sed -i 's/(sites.size()/60)/(sites.size()/10)/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
+sed -i 's/, 380+200*spanCount)/, 400+230*spanCount)/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
 #背景修改
 #mv $CURRENT_DIR/DIY/app_bg.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
 #取消选集全屏
